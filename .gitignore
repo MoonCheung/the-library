@@ -1,0 +1,11 @@
+# ignore file
+dist
+.DS_Store
+node_modules
+coverage
+.idea
+.eslintcache
+
+# ignore lock file
+package-lock.json
+yarn.lock
