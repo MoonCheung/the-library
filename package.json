@@ -5,8 +5,12 @@
   "type": "module",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
+  "global": "dist/iife/index.js",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs",
+    "watch": "rm -rf dist && cross-env NODE_ENV=development rollup -w -c --bundleConfigAsCjs",
+    "build": "rm -rf dist && cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs",
+    "postbuild": "tsc --emitDeclarationOnly --declaration --project tsconfig.json --outDir dist/esm",
     "test": "jest",
     "lint": "eslint --ext \"**/*.{.js,.ts}\"",
     "prettier": "prettier --write \"**/*.{js,jsx,json}\"",
@@ -14,6 +18,9 @@
   },
   "keywords": [
     "the-library"
+  ],
+  "files": [
+    "dist"
   ],
   "author": {
     "name": "MoonCheung",
@@ -23,11 +30,15 @@
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-json": "^5.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "@types/jest": "^29.2.2",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "babel-jest": "^29.3.0",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.15.13",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
@@ -37,7 +48,9 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "rollup": "^3.2.5",
-    "rollup-plugin-esbuild": "^4.10.2",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "ts-jest": "^29.0.3",
+    "ts-node": "^10.9.1",
     "typescript": "^4.8.4"
   },
   "husky": {
@@ -47,6 +60,6 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": "eslint --cache",
-    "**/*": "prettier --check --ignore-unknown"
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
