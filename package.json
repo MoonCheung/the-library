@@ -46,7 +46,7 @@
     }
   },
   "lint-staged": {
-    "**/x": "eslint --cache",
+    "**/*.{js,jsx,ts,tsx}": "eslint --cache",
     "**/*": "prettier --check --ignore-unknown"
   }
 }
