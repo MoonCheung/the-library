@@ -69,7 +69,8 @@
   },
   "release-it": {
     "github": {
-      "release": true
+      "release": true,
+      "tokenRef": "release-it"
     },
     "git": {
       "commitMessage": "release v${version}"
