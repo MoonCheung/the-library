@@ -70,10 +70,13 @@
   "release-it": {
     "github": {
       "release": true,
-      "tokenRef": "release-it"
+      "tokenRef": "release-it",
+      "releaseName": "${version}",
+      "releaseNotes": "echo \"${changelog}\" | sed 1,2d"
     },
     "git": {
-      "commitMessage": "release v${version}"
+      "commitMessage": "release v${version}",
+      "tagName": "v${version}"
     },
     "npm": {
       "publish": false
@@ -83,9 +86,25 @@
     },
     "plugins": {
       "@release-it/conventional-changelog": {
-        "preset": "angular",
         "infile": "CHANGELOG.md",
-        "header": "# Changelog"
+        "header": "# Changelog",
+        "preset": {
+          "name": "conventionalcommits",
+          "types": [
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            },
+            {
+              "type": "chore",
+              "section": "chore describe"
+            }
+          ]
+        }
       }
     }
   }
