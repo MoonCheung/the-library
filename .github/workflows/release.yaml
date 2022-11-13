@@ -14,6 +14,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+      - name: Update CHANDGELOG.md file
+        uses: fregante/release-with-changelog@v3
+        with:
+          token: ${{ secrets.LIB_TOKEN }}
       - name: Setup node ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -23,22 +27,3 @@ jobs:
       - run: npm publish # 如果发布之前需要构建
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # 上面在Github Secrets中设置的密钥
-
-
-  # github-release:
-  #   needs: publish
-  #   runs-on: ubuntu-latest
-  #   strategy:
-  #     matrix:
-  #       node-version: [16.x]
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - name: Setup node ${{ matrix.node-version }}
-  #     uses: actions/setup-node@v3
-  #     with:
-  #       node-version: ${{ matrix.node-version }}
-  #       registry-url: https://registry.npmjs.org/
-  #   - run: npm i -g github-release-from-changelog
-  #   - run: github-release-from-changelog
-  #     env:
-  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
