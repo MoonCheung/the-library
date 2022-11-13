@@ -1,5 +1,11 @@
 # Changelog
 
+### [1.0.6](https://github.com/MoonCheung/the-library/compare/v1.0.5...v1.0.6) (2022-11-13)
+
+### chore describe
+
+- update yaml file ([5c29720](https://github.com/MoonCheung/the-library/commit/5c297208b96933118b53b2c4a4fb7a417d01b33f))
+
 ### [1.0.5](https://github.com/MoonCheung/the-library/compare/v1.0.4...v1.0.5) (2022-11-13)
 
 ### chore describe
