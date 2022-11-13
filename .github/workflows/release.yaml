@@ -21,10 +21,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm i
       - run: npm publish # 如果发布之前需要构建
-      - name: Update CHANDGELOG.md file
-        uses: fregante/release-with-changelog@v3
-        with:
-          token: ${{ secrets.LIB_TOKEN }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # 上面在Github Secrets中设置的密钥
 
