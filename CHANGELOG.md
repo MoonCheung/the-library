@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.0.4](https://github.com/MoonCheung/the-library/compare/v1.0.3...v1.0.4) (2022-11-13)
+
+### chore describe
+
+- 变更名 yaml 配置文件 ([2c3e54f](https://github.com/MoonCheung/the-library/commit/2c3e54f12667bdc07d5f8cde500bc669a718792a))
+- 移除 main.yaml 配置 ([d6b1cd2](https://github.com/MoonCheung/the-library/commit/d6b1cd28942fcda0791a175618707a0b1eb89107))
+- format yaml conf ([0edd825](https://github.com/MoonCheung/the-library/commit/0edd82595cbd3ee6cf35cec52d13ab990e1d6cf7))
+
 ### [1.0.3](https://github.com/MoonCheung/the-library/compare/v1.0.2...v1.0.3) (2022-11-13)
 
 ### chore describe
