@@ -1,6 +1,6 @@
 {
   "name": "the-library",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Have your own test library",
   "type": "module",
   "main": "dist/umd/index.js",
