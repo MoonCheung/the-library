@@ -1,5 +1,11 @@
 # Changelog
 
+### [1.0.3](https://github.com/MoonCheung/the-library/compare/v1.0.2...v1.0.3) (2022-11-13)
+
+### chore describe
+
+- 增加.github 的工作流 ([55e68fa](https://github.com/MoonCheung/the-library/commit/55e68fad64c5b23b1ce2bafe1a19596793d8abe4))
+
 ### [1.0.2](https://github.com/MoonCheung/the-library/compare/1.0.1...v1.0.2) (2022-11-10)
 
 ### chore describe
