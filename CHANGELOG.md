@@ -1,5 +1,11 @@
 # Changelog
 
+### [1.0.11](https://github.com/MoonCheung/the-library/compare/v1.0.10...v1.0.11) (2022-11-14)
+
+### Bug Fixes
+
+- release.yaml ([9c09242](https://github.com/MoonCheung/the-library/commit/9c09242b3c8ea96b2fb6ccc727de1f21ae41c7e5))
+
 ### [1.0.10](https://github.com/MoonCheung/the-library/compare/v1.0.7...v1.0.10) (2022-11-14)
 
 ### chore describe
