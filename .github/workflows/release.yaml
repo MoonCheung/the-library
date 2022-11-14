@@ -21,21 +21,21 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm i
       - run: npm publish # 如果发布之前需要构建
+      - name: Update CHANGELOG.md
+        with:
+          token: ${{ secrets.LIB_TOKEN }}
+          release-type: node
+          changelog-types: '[{
+            "type": "feat",
+            "section": "Features"
+            },
+            {
+            "type": "fix",
+            "section": "Bug Fixes"
+            },
+            {
+            "type": "chore",
+            "section": "chore describe"
+            }]'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # 上面在Github Secrets中设置的密钥
-
-  github-release:
-    needs: publish
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      - name: Setup node ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          registry-url: https://registry.npmjs.org/
-      - run: npm i -g github-release-from-changelog
-      - run: github-release-from-changelog --filename CHANGELOG.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.LIB_TOKEN }}
