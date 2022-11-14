@@ -1,5 +1,11 @@
 # Changelog
 
+### [1.0.13](https://github.com/MoonCheung/the-library/compare/v1.0.12...v1.0.13) (2022-11-14)
+
+### Bug Fixes
+
+- 修复 release.yaml 配置漏了 needs 选项属性 ([124b7d7](https://github.com/MoonCheung/the-library/commit/124b7d7260766e48631bb6cd709c3df7e4f2a8e0))
+
 ### [1.0.12](https://github.com/MoonCheung/the-library/compare/v1.0.11...v1.0.12) (2022-11-14)
 
 ### Bug Fixes
