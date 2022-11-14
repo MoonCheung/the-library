@@ -1,5 +1,7 @@
 # Changelog
 
+### [1.0.9](https://github.com/MoonCheung/the-library/compare/v1.0.8...v1.0.9) (2022-11-14)
+
 ### [1.0.8](https://github.com/MoonCheung/the-library/compare/v1.0.7...v1.0.8) (2022-11-13)
 
 ### chore describe
