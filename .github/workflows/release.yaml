@@ -22,6 +22,7 @@ jobs:
       - run: npm i
       - run: npm publish # 如果发布之前需要构建
       - name: Update CHANGELOG.md
+        uses: google-github-actions/release-please-action@v3
         with:
           token: ${{ secrets.LIB_TOKEN }}
           release-type: node
