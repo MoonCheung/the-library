@@ -25,6 +25,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # 上面在Github Secrets中设置的密钥
 
   github-release:
+    needs: publish
     runs-on: ubuntu-latest
     strategy:
       matrix:
