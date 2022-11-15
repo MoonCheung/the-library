@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.0.14](https://github.com/MoonCheung/the-library/compare/v1.0.13...v1.0.14) (2022-11-15)
+
+### chore describe
+
+- 更新 commit-msg 的 husky 配置 ([15f23dd](https://github.com/MoonCheung/the-library/commit/15f23dd61f140b09ae1784190ba84ffee03e8932))
+- 更新 package.json 配置 ([d511d8c](https://github.com/MoonCheung/the-library/commit/d511d8cb7237c98f9a35b549869f7c4e79d578f4))
+- 移除 git-cz 依赖及其使用,部分 release-please-action 配置,安装 comminlint 依赖配置 ([29d181a](https://github.com/MoonCheung/the-library/commit/29d181a08a5b7890900be272f1ccfa2f6a9351a5))
+
 ### [1.0.13](https://github.com/MoonCheung/the-library/compare/v1.0.12...v1.0.13) (2022-11-14)
 
 ### Bug Fixes
